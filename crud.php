@@ -15,7 +15,7 @@ if(isset($_POST['insert'])){
     $result = $connection -> query($query);
 
     if($result){
-        echo "<h1>Succesfully Registred</h1>";
+        header("location: students.php");
     }else {
         echo $connection -> error;
     }
@@ -33,10 +33,22 @@ if(isset($_POST['insert'])){
         $result = $connection -> query($query);
     
         if($result){
-            echo "<h1>Succesfully Updated</h1>";
+            header("location: students.php");
         }else {
             echo $connection -> error;
         }
+}else if(isset($_GET['id'])){
+    $student_id  = $_GET['id'];
+
+    $query = "DELETE FROM student WHERE id ='$student_id'";
+
+    $result = $connection -> query($query);
+
+    if($result){
+        header("location: students.php");
+    }else {
+        echo $connection -> error;
+    }
 }
 
 
