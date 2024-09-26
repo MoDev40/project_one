@@ -19,6 +19,9 @@
                     <th class="py-3 px-4 text-left">Name</th>
                     <th class="py-3 px-4 text-left">Class</th>
                     <th class="py-3 px-4 text-left">Actions</th>
+                    <th class="py-3 px-4 text-left">
+                        <a href="form.php" style="font-size: large;">+</a>
+                    </th>
                 </tr>
             </thead>
             <tbody>
@@ -38,11 +41,11 @@
                             $htmlTable .= "<td class='py-3 px-4'>$row[name]</td>";
                             $htmlTable .= "<td class='py-3 px-4'>$row[class]</td>";
                             $htmlTable .= "
-                                <td class='py-3 px-4'>
-                                    <a href='form.php?$row[id]' class='bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600'>Update</a href=''>
-                                    <a href='crud.php?$row[id]' name='delete' class='bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600 ml-2'>Delete</a href=''>
-                                </td>
-                            ";
+                            <td class='py-3 px-4'>
+                                <a href='form.php?id=$row[id]' class='bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600'>Update</a>
+                                <a href='crud.php?id=$row[id]' class='bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600 ml-2'>Delete</a>
+                            </td>
+                            ";                        
                             $htmlTable .= "</tr>";
                         }
 
