@@ -42,7 +42,7 @@
                             $htmlTable .= "<td class='py-3 px-4'>$row[class]</td>";
                             $htmlTable .= "
                             <td class='py-3 px-4'>
-                                <a href='form.php?id=$row[id]' class='bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600'>Update</a>
+                                <a href='form.php?id=$row[id]&name=$row[name]&class=$row[class]' class='bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600'>Update</a>
                                 <a href='crud.php?id=$row[id]' class='bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600 ml-2'>Delete</a>
                             </td>
                             ";                        

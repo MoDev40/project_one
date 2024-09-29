@@ -12,17 +12,17 @@
 
         <div class="mb-4">
             <label for="student-id" class="block text-sm font-medium text-gray-700">Student ID</label>
-            <input type="text" id="student-id" name="student_id"  class="mt-1 p-2 border border-gray-300 rounded-md w-full focus:outline-none focus:ring focus:ring-blue-500">
+            <input value="<?php echo isset($_GET['id']) ? htmlspecialchars($_GET['id']) : ''; ?>" type="text" id="student-id" name="student_id" class="mt-1 p-2 border border-gray-300 rounded-md w-full focus:outline-none focus:ring focus:ring-blue-500">
         </div>
 
         <div class="mb-4">
             <label for="student-name" class="block text-sm font-medium text-gray-700">Name</label>
-            <input type="text" id="student-name" name="student_name"  class="mt-1 p-2 border border-gray-300 rounded-md w-full focus:outline-none focus:ring focus:ring-blue-500">
+            <input value="<?php echo isset($_GET['name']) ? htmlspecialchars($_GET['name']) : ''; ?>" type="text" id="student-name" name="student_name"  class="mt-1 p-2 border border-gray-300 rounded-md w-full focus:outline-none focus:ring focus:ring-blue-500">
         </div>
 
         <div class="mb-4">
             <label for="student-class" class="block text-sm font-medium text-gray-700">Class</label>
-            <input type="text" id="student-class" name="student_class"  class="mt-1 p-2 border border-gray-300 rounded-md w-full focus:outline-none focus:ring focus:ring-blue-500">
+            <input value="<?php echo isset($_GET['class']) ? htmlspecialchars($_GET['class']) : ''; ?>" type="text" id="student-class" name="student_class"  class="mt-1 p-2 border border-gray-300 rounded-md w-full focus:outline-none focus:ring focus:ring-blue-500">
         </div>
 
         <button type="submit" name="insert" class="w-16 bg-blue-500 text-white font-semibold py-2 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">
